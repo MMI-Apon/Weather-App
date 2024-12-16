@@ -2,7 +2,6 @@ const apiKey = 'caaeeb75559ecf8427c14785efb459ac';
 async function weather(city) {
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
     const data = await res.json();
-    console.log(data);
     if(res.status === 404){
         alert('Please Enter A Valid City Name')
     }
@@ -28,7 +27,6 @@ async function weather(city) {
             </div>`;
         }
     }
-console.log(data.weather[0].main);
 }
 
 
